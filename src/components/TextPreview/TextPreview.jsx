@@ -1,11 +1,20 @@
 import { marked } from "marked"
 
-export const TextPreview = ({ currentInput }) => {
+export const TextPreview = ({ currentInput = "n" }) => {
 
-    const htmlVal = marked.parse(currentInput);
+    //use parser
+    let htmlVal = `${marked.parse(currentInput)}`;
+
+    var wrapper = document.getElementById('preview');
+
+    console.log('ques wrapper??', wrapper);
+    wrapper.innerHTML = htmlVal;
+
+    // console.log('que es htmlVal? ', typeof htmlVal);
 
     return (
-        <>
+        <div id="preview">
+            {/*             
             <label htmlFor="preview">Previewer</label>
             <textarea
                 name="preview"
@@ -14,6 +23,10 @@ export const TextPreview = ({ currentInput }) => {
                 rows="10"
                 value={htmlVal}
                 readOnly></textarea>
-        </>
+
+
+            <blockquote>
+            </blockquote> */}
+        </div>
     )
 }
