@@ -1,32 +1,17 @@
-import { marked } from "marked"
+import { useEffect } from "react";
+import { marked } from "marked";
 
-export const TextPreview = ({ currentInput = "n" }) => {
-
-    //use parser
-    let htmlVal = `${marked.parse(currentInput)}`;
-
-    var wrapper = document.getElementById('preview');
-
-    console.log('ques wrapper??', wrapper);
-    wrapper.innerHTML = htmlVal;
-
-    // console.log('que es htmlVal? ', typeof htmlVal);
+export const TextPreview = ({ currentInput }) => {
+    useEffect(() => {
+        // Access the DOM after rendering
+        const wrapper = document.getElementById("preview");
+        if (wrapper) {
+            const htmlVal = marked.parse(currentInput);
+            wrapper.innerHTML = htmlVal;
+        }
+    }, [currentInput]); // Runs every time currentInput changes
 
     return (
-        <div id="preview">
-            {/*             
-            <label htmlFor="preview">Previewer</label>
-            <textarea
-                name="preview"
-                id="preview"
-                cols="30"
-                rows="10"
-                value={htmlVal}
-                readOnly></textarea>
-
-
-            <blockquote>
-            </blockquote> */}
-        </div>
-    )
-}
+        <div id="preview"></div>
+    );
+};
