@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { marked } from "marked";
 
+// eslint-disable-next-line react/prop-types
 export const TextPreview = ({ currentInput }) => {
     useEffect(() => {
         // Access the DOM after rendering

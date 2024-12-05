@@ -1,6 +1,7 @@
 // import { useState } from "react"
 import styles from "./TextEditor.module.css"
 
+// eslint-disable-next-line react/prop-types
 export const TextEditor = ({ currentInput, handleChange }) => {
 
     // const [currentInput, setCurrentInput] = useState("");
