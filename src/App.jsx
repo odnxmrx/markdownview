@@ -1,6 +1,3 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import { useState } from 'react';
 import './App.css'
 import { TextEditor } from './components/TextEditor/TextEditor'
@@ -31,7 +28,7 @@ You can add your list
 
 Also an image:
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Square_200x200.svg/480px-Square_200x200.svg.png)
+![alt text](https://cdn-icons-png.flaticon.com/256/10910/10910575.png)
 
 
 **This is a bolded text** 
@@ -46,8 +43,6 @@ Also an image:
 
   return (
     <main>
-      {/* <h1>Hello world!</h1> */}
-      {/* <p>I'm an app. Markdown Previewer</p> */}
       <TextEditor currentInput={currentInput} handleChange={handleChange}></TextEditor>
       <TextPreview currentInput={currentInput}></TextPreview>
     </main>
