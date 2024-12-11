@@ -4,7 +4,7 @@ import styles from "./TextEditor.module.css"
 export const TextEditor = ({ currentInput, handleChange }) => {
 
     return (
-        <div className={styles.container}>
+        <div className={styles.containerBox}>
             <textarea
                 name="editor"
                 id="editor"

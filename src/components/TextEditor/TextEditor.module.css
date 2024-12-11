@@ -1,8 +1,9 @@
-.container {
+.containerBox {
+  /* display: flex; */
   color: red;
 }
 
-.container textarea {
+.containerBox textarea {
   height: 100%;
   min-width: 500px;
 }
