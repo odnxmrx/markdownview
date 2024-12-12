@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css'
 import { TextEditor } from './components/TextEditor/TextEditor'
 import { TextPreview } from './components/TextPreview/TextPreview'
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
 
 function App() {
 
@@ -43,8 +45,10 @@ Also an image:
 
   return (
     <main>
-      <TextEditor currentInput={currentInput} handleChange={handleChange}></TextEditor>
-      <TextPreview currentInput={currentInput}></TextPreview>
+      <Header />
+      <TextEditor currentInput={currentInput} handleChange={handleChange} />
+      <TextPreview currentInput={currentInput} />
+      <Footer />
     </main>
   )
 }

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { marked } from "marked";
+import styles from "./TextPreview.module.css"
 
 // eslint-disable-next-line react/prop-types
 export const TextPreview = ({ currentInput }) => {
@@ -12,6 +13,6 @@ export const TextPreview = ({ currentInput }) => {
     }, [currentInput]); // On currentInput change
 
     return (
-        <div id="preview"></div>
+        <div id="preview" className={styles.containerBox}></div>
     );
 };

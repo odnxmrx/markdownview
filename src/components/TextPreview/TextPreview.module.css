@@ -1,3 +1,14 @@
 .containerBox {
-  grid-area: 1 / 1 / 2 / 3;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .containerBox {
+    grid-column: 1 / 2; /* span full width */
+  }
 }

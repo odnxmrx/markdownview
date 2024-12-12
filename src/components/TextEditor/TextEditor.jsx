@@ -8,8 +8,8 @@ export const TextEditor = ({ currentInput, handleChange }) => {
             <textarea
                 name="editor"
                 id="editor"
-                // cols={30}
-                // rows={5}
+                cols={30}
+                rows={10}
                 value={currentInput}
                 onChange={handleChange}
             ></textarea>

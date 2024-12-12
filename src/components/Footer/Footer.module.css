@@ -1,0 +1,10 @@
+.myFooter {
+  grid-column: 1 / 3; /* Span across both columns */
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .myFooter {
+    grid-column: 1 / 2; /* span full width */
+  }
+}
