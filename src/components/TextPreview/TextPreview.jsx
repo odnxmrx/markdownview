@@ -4,6 +4,11 @@ import styles from "./TextPreview.module.css"
 
 // eslint-disable-next-line react/prop-types
 export const TextPreview = ({ currentInput }) => {
+
+    marked.use({
+        breaks: true,
+    })
+
     useEffect(() => {
         const wrapper = document.getElementById("preview"); // Access DOM after rendering
         if (wrapper) {
