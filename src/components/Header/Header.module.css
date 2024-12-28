@@ -1,3 +1,13 @@
 .myHeader {
   grid-column: 1 / 3; /* Span across both columns */
+  line-height: 10px;
+}
+
+.myHeader h1 {
+  /*Headers only font family*/
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #003eaa;
 }
