@@ -2,6 +2,10 @@ body,
 #root {
   height: 100%;
   margin: 0;
+  font-family: "Roboto Mono", serif; /*Font family for general txt*/
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
 
 main {
@@ -14,6 +18,16 @@ main {
   gap: 16px;
 }
 
+h1,
+h2,
+h3 {
+  /*Headers only font family*/
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
   main {
@@ -21,9 +35,9 @@ main {
     grid-template-rows: auto auto auto auto; /* Stack all rows vertically */
   }
 
-  .header,
+  .myHeader,
   .containerBox,
-  .footer {
+  .myFooter {
     grid-column: 1 / 2; /* Each item spans the full width */
   }
 }
