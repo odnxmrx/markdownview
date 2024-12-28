@@ -7,26 +7,49 @@ import { Header } from './components/Header/Header';
 
 function App() {
 
-  const preWrittenEditText = `# Hellooooow
+  const preWrittenEditText = `# Title goes here
 
-## This is a sub header
+Welcome to this **markdown realtime previewer**. Start typing rigth here.
 
-[Google](google.com)
+## Features
 
-\`this is inline code\`
+[Google link](google.com)
+
+
+- **Feature 1**: short description goes here.
+- **Feature 2**: short description goes here.
+- **Feature 3**: short description goes here.
+
+---
+
+## **Technologies Used**
+
+### **Frontend**
+
+- **React + Vite**
+- **CSS Modules**
+
+### **Backend**
+
+- **Node.js**
+- **Database**
+
+---
+
+
+## Setup and Installation
+
+1. On root directory, run the following command in the console:
+
+
+\`\`\`bash
+  npm install
 
 \`\`\`
-  This is a code block
 
-\`\`\`
+## Running App
 
-You can add your list
-- Item 1
-- Item 2
-
-### Blockoues
-
-> This is a blockquote
+Add images of your app here.
 
 Also an image:
 
@@ -34,6 +57,28 @@ Also an image:
 
 
 **This is a bolded text** 
+
+You can add your list
+- Item 1
+- Item 2
+
+
+\`\`\`bash
+      ________________________
+      I'm an expert in my field.
+      ---------------------------
+          \   ^__^
+           \  (oo)\_______
+              (__)\       )\/\\
+                  ||----w |
+                  ||     ||
+
+\`\`\`
+
+
+### Blockoues
+
+> This is a blockquote
 
 `
   const [currentInput, setCurrentInput] = useState(preWrittenEditText);
