@@ -9,7 +9,7 @@ function App() {
 
   const preWrittenEditText = `# Title goes here
 
-Welcome to this **markdown realtime previewer**. Start typing rigth here.
+Welcome to this **markdown realtime previewer**. \`Start typing rigth here\`. Feel free to edit it to fit your needs.
 
 ## Features
 
@@ -42,7 +42,7 @@ Welcome to this **markdown realtime previewer**. Start typing rigth here.
 1. On root directory, run the following command in the console:
 
 
-\`\`\`bash
+\`\`\`
   npm install
 
 \`\`\`
