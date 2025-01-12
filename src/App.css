@@ -1,43 +1,62 @@
 body,
 #root {
-  height: 100%;
+  min-height: 90svh;
   margin: 0;
-  font-family: "Roboto Mono", serif; /*Font family for general txt*/
+  font-family: "Roboto Mono", serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
+  /* Use system color scheme */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #222222;
 }
 
 main {
-  height: 100%;
+  /* height: 100%; */
+  max-height: 95svh;
   padding: 16px 60px;
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr auto;
   gap: 16px;
 }
 
 pre {
   line-height: 1.2em;
-  background-color: lightgray;
+  background-color: darkslategray;
   background-origin: content-box;
-
-  /* some extra styles*/
+  /* Other styles */
   padding: 10px 20px;
   text-align: justify;
+  color: white; /* readable text in dark mode */
 }
 
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
   main {
-    grid-template-columns: 1fr; /* Single column layout */
-    grid-template-rows: auto auto auto auto; /* Stack all rows vertically */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
   }
 
   .myHeader,
   .containerBox,
   .myFooter {
-    grid-column: 1 / 2; /* Each item spans the full width */
+    grid-column: 1 / 2;
+  }
+}
+
+/* Light mode styles */
+@media (prefers-color-scheme: light) {
+  body,
+  #root {
+    color: #444444;
+    background-color: #ffffff;
+  }
+
+  pre {
+    background-color: #f4f4f4; /* Light background for <pre> */
+    color: #333333; /* Text color for <pre> in light mode */
   }
 }

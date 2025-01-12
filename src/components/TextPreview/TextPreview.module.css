@@ -3,12 +3,27 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #f9f9f9;
+  background-color: #f9f9f9; /* Default for light mode */
+  color: #333;
+  max-height: 100%;
+  overflow: auto;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .containerBox {
+    background-color: #333333; /* Dark background for dark mode */
+    border: 1px solid #555555;
+    color: rgba(255, 255, 255, 0.9);
+    max-height: 100%;
+    overflow: auto;
+  }
 }
 
 /* Responsive layout for small screens */
 @media (max-width: 768px) {
   .containerBox {
-    grid-column: 1 / 2; /* span full width */
+    grid-column: 1 / 2;
+    max-height: 600px;
   }
 }
